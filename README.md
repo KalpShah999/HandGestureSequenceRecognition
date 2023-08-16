@@ -17,3 +17,6 @@ python3 app.py
 
 # input.py 
 This additional script takes input from the main `app.py` script to track sequences of hand gestures to initiate different actions. Customs actions and corresponding sequences can be defined in the script manually as well. 
+
+# Future Prospects 
+This program aims to work towards understanding sequences of sign language signs in order to form gramatically correct english sentences allowing everyone to bypass the barrier of communication with those with auditory impairments.  
