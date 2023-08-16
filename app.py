@@ -174,21 +174,6 @@ def main():
                 #Send information to input sorting 
                 input.get_input(keypoint_classifier_labels[hand_sign_id], handedness.classification[0].label[0:])
                 
-            
-            #Send information to input sorting 
-            leftRightCheck = {None, None};
-            for hand_landmarks, handedness in zip(results.multi_hand_landmarks,
-                                                  results.multi_handedness):
-                if (leftRightCheck[0] is None and handedness.classification[0].label[0:] == "Left"):
-                    leftRightCheck[0] = keypoint_classifier_labels[hand_sign_id];
-                if (leftRightCheck[1] is None and handedness.classification[0].label[0:] == "Right"):
-                    leftRightCheck[1] = keypoint_classifier_labels[hand_sign_id];
-                    
-                if (leftRightCheck[0] is not None and leftRightCheck[1] is not None):
-                    break;
-            
-            input.get_input_2(keypoint_classifier_labels[hand_sign_id], handedness.classification[0].label[0:])
-                    
         else:
             point_history.append([0, 0])
 
